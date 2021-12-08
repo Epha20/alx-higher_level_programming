@@ -2,6 +2,7 @@
 """ creates empty class called square
 """
 
+
 class Square:
     '''Class Square using pass
     '''
