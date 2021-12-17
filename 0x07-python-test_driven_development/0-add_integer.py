@@ -1,21 +1,21 @@
 #!/usr/bin/python3
-# add_integer.py
+'''
+add_integer module
+'''
 
 
-"""Contains only one function, def add_integer(a, b=98):"""
-
-
-def add_integer(a, b=98):
-    """Adds and returns the sum of two integers
-    Args:
-        a: first integer
-        b: second integer
+def add_integer(a, b):
     """
-    if type(a) is not int and type(a) is not float:
-        raise TypeError("a must be an integer")
-    if type(b) is not int and type(b) is not float:
-        raise TypeError("b must be an integer")
-    if type(a) is float or type(b) is float:
+    Return sum of a and b.
+    """
+    if type(a) == float:
         a = int(a)
+    if type(b) == float:
         b = int(b)
-    return a + b
+
+    if not isinstance(a, int) or isinstance(a, bool):
+        raise TypeError("a must be an integer")
+    if not isinstance(b, int) or isinstance(b, bool):
+        raise TypeError("b must be an integer")
+
+    return ( a + b )
